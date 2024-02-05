@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import pic from "../assets/mat1.jpg";
+import { useState } from "react";
+import OrderInfo from "./OrderInfo";
 
 const Container = styled.div`
   display: flex;
@@ -34,6 +36,7 @@ const Productinfo = styled.div`
 `;
 
 const Product = () => {
+  const [order, setorder] = useState(false);
   return (
     <Container>
       <Productimage>
@@ -46,8 +49,9 @@ const Product = () => {
         <span>size:3 by 4</span>
         <br />
         <span>Quantity: 10</span>
-        <button>Order</button>
+        <button onClick={() => setorder(true)}>Order</button>
       </Productinfo>
+      {order && <OrderInfo setorder={setorder} />}
     </Container>
   );
 };

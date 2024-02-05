@@ -20,6 +20,16 @@ const Products = styled.div`
   flex: 1;
   display: flex;
   justify-content: space-evenly;
+
+  button {
+    width: 100px;
+    padding: 5px;
+    background-color: #fd0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 `;
 const Links = styled(Link)`
   text-decoration: none;
@@ -45,6 +55,7 @@ const Nav = () => {
         <Links to="/products?utensils">Utensils</Links>
         <Links to="/products?malimali">Mali Mali</Links>
         <Links to="/products?chairs">chairs</Links>
+        <button>Login</button>
       </Products>
     </Container>
   );
